@@ -34,7 +34,16 @@ difference is too large (0.001), then the executable will exit with code -1.
 
     `./target/release/`
 
-    On the same system, the binaries can be copied and used anywhere you like!
+  On the same system, the binaries can be copied and used anywhere you like!
+
+  To make static binaries, compile with
+
+    `cargo build --release --target x86_64-unknown-linux-musl`
+
+  You may need to run `rustup target add x86_64-unknown-linux-musl` first. The
+  executables in `./target/x86_64-unknown-linux-musl/` should now run forever
+  without any dependencies. Nice.
+
     </details> </details>
 
 ## Troubleshooting
